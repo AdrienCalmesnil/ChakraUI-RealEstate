@@ -46,7 +46,7 @@ const Property = ({
               {isVerified && <GoVerified />}
             </Box>
             <Text fontWeight="bold" fontSize="lg">
-              AED {price}
+              AED {millify(price)}
               {rentFrequency && `/${rentFrequency}`}
             </Text>
           </Flex>
@@ -65,7 +65,7 @@ const Property = ({
           <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
         </Flex>
         <Text fontSize="lg">
-          {title.length > 30 ? title.substring(0, 30) + "..." : title}
+          {title.length > 30 ? `${title.substring(0, 30)}...` : title}
         </Text>
       </Box>
     </Flex>
