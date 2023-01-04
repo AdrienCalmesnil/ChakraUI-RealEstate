@@ -25,5 +25,5 @@ fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
 })
   .then((response) => response.json())
   .then((data) => {
-    console.log(data.records); // an array of records in the table
+    console.log(data.records[0].fields.Images); // an array of records in the table
   });
