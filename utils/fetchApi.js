@@ -1,4 +1,6 @@
 import axios from "axios";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 export const baseUrl = "https://bayut.p.rapidapi.com";
 
@@ -14,9 +16,9 @@ export const fetchApi = async (url) => {
 };
 
 // Fetch Airtable API
-const baseId = "app59CGrOcJrsLC4F";
-const tableName = "tblAbzlXMszYJqd49";
-const apiKey = "keyUu0ZDcuFQ5EK2a";
+const baseId = process.env.API_BASE_ID;
+const tableName = process.env.API_TABLE_NAME;
+const apiKey = process.env.API_KEY;
 
 fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
   headers: {
