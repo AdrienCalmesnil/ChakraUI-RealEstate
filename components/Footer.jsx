@@ -8,7 +8,7 @@ const Footer = () => (
     borderTop="1px"
     borderColor="gray.100"
   >
-    2023 Realtor, Inc.
+    2023 Atelier Transactions, Inc.
   </Box>
 );
 

@@ -12,3 +12,18 @@ export const fetchApi = async (url) => {
 
   return data;
 };
+
+// Fetch Airtable API
+const baseId = "app59CGrOcJrsLC4F";
+const tableName = "tblAbzlXMszYJqd49";
+const apiKey = "keyUu0ZDcuFQ5EK2a";
+
+fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
+  headers: {
+    Authorization: `Bearer ${apiKey}`,
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data.records); // an array of records in the table
+  });
