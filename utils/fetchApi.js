@@ -14,16 +14,16 @@ export const fetchApi = async (url) => {
 };
 
 // Fetch Airtable API
-const baseId = "app59CGrOcJrsLC4F";
-const tableName = "tblAbzlXMszYJqd49";
-const apiKey = "keyUu0ZDcuFQ5EK2a";
+// const baseId = "app59CGrOcJrsLC4F";
+// const tableName = "tblAbzlXMszYJqd49";
+// const apiKey = "keyUu0ZDcuFQ5EK2a";
 
-fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
-  headers: {
-    Authorization: `Bearer ${apiKey}`,
-  },
-})
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data.records[0].fields.Images); // an array of records in the table
-  });
+// fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
+//   headers: {
+//     Authorization: `Bearer ${apiKey}`,
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data.records[0].fields.Images); // an array of records in the table
+//   });

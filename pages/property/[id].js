@@ -25,7 +25,7 @@ const PropertyDetails = ({
     amenities,
     photos,
   },
-}) => (
+}) => {
   <Box maxWidth="1000px" margin="auto" p="4">
     {photos && <ImageScrollbar data={photos} />}
     <Box w="full" p="6">
@@ -121,10 +121,8 @@ const PropertyDetails = ({
         )}
       </Flex>
     </Box>
-  </Box>
-);
-
-export default PropertyDetails;
+  </Box>;
+};
 
 export async function getServerSideProps({ params: { id } }) {
   const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
@@ -135,3 +133,4 @@ export async function getServerSideProps({ params: { id } }) {
     },
   };
 }
+export default PropertyDetails;

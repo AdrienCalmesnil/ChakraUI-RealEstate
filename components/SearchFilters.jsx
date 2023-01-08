@@ -82,12 +82,12 @@ export default function SearchFilters() {
           borderColor="gray.200"
           marginTop="2"
         >
-          Search Location
+          Chercher Lieu
         </Button>
         {showLocations && (
           <Flex flexDir="column" pos="relative" paddingTop="2">
             <Input
-              placeholder="Type Here"
+              placeholder="Écrire ici"
               value={searchTerm}
               w="300px"
               focusBorderColor="gray.300"
